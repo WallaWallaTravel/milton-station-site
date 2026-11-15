@@ -214,10 +214,9 @@ h1, h2, h3 { font-family: var(--heading); font-weight: 600; letter-spacing: -0.0
 section { padding: 3.25rem 0; }
 .hero,
 #features,
-#contact,
 .legal { background: var(--bg); }
 #how-it-works,
-#sms { background: var(--bg-alt); }
+#contact { background: var(--bg-alt); }
 .hero { padding: 3.5rem 0 3.75rem; }
 .section-label {
   font-size: 0.78rem;
