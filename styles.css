@@ -1,6 +1,7 @@
 /* Milton Station LLC — miltonstation.com */
 :root {
-  --bg: #f3efe6;
+  --bg: #f4f0e6;
+  --bg-alt: #e4ebe6;
   --bg-card: #fbf8f1;
   --ink: #1b211c;
   --ink-muted: #545c56;
@@ -16,8 +17,8 @@
   --radius: 16px;
   --max: 70rem;
   --text: 38rem;
-  --sans: "Source Sans 3", "Segoe UI", sans-serif;
-  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans: "Inter", "Segoe UI", sans-serif;
+  --heading: "Barlow Semi Condensed", "Arial Narrow", sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -68,7 +69,7 @@ a:hover { color: var(--forest); }
   position: sticky;
   top: 0;
   z-index: 20;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  background: color-mix(in srgb, var(--bg) 94%, transparent);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
 }
@@ -97,9 +98,9 @@ a:hover { color: var(--forest); }
   line-height: 1.05;
 }
 .brand-name {
-  font-family: var(--serif);
-  font-weight: 600;
-  font-size: 1.15rem;
+  font-family: var(--heading);
+  font-weight: 700;
+  font-size: 1.2rem;
   letter-spacing: -0.02em;
 }
 .brand-tag {
@@ -143,12 +144,12 @@ a:hover { color: var(--forest); }
   height: 2px;
   background: var(--gold);
 }
-h1, h2, h3 { font-family: var(--serif); letter-spacing: -0.03em; line-height: 1.15; color: var(--forest-deep); }
+h1, h2, h3 { font-family: var(--heading); font-weight: 600; letter-spacing: -0.02em; line-height: 1.15; color: var(--forest-deep); }
 .hero h1 {
-  font-size: clamp(2.25rem, 6vw, 4.15rem);
-  font-weight: 600;
+  font-size: clamp(2.25rem, 6vw, 3.85rem);
+  font-weight: 700;
   margin: 0 0 1.15rem;
-  max-width: 16ch;
+  max-width: 18ch;
 }
 .lede {
   font-size: 1.25rem;
@@ -204,13 +205,20 @@ h1, h2, h3 { font-family: var(--serif); letter-spacing: -0.03em; line-height: 1.
   font-weight: 700;
 }
 .plaque-addr {
-  font-family: var(--serif);
+  font-family: var(--heading);
   font-size: 1.15rem;
   line-height: 1.35;
 }
 
 /* Sections */
-section { padding: 3rem 0; }
+section { padding: 3.25rem 0; }
+.hero,
+#features,
+#contact,
+.legal { background: var(--bg); }
+#how-it-works,
+#sms { background: var(--bg-alt); }
+.hero { padding: 3.5rem 0 3.75rem; }
 .section-label {
   font-size: 0.78rem;
   font-weight: 700;
@@ -238,7 +246,7 @@ h2 { font-size: clamp(1.75rem, 3.5vw, 2.4rem); margin: 0 0 0.75rem; }
   box-shadow: var(--shadow);
 }
 .step-num {
-  font-family: var(--serif);
+  font-family: var(--heading);
   font-size: 1.75rem;
   color: var(--gold);
   font-weight: 600;
@@ -294,7 +302,7 @@ h2 { font-size: clamp(1.75rem, 3.5vw, 2.4rem); margin: 0 0 0.75rem; }
   text-align: center;
 }
 .mock-title {
-  font-family: var(--serif);
+  font-family: var(--heading);
   font-size: 1.2rem;
   margin: 0 0 1rem;
   color: var(--forest-deep);
@@ -379,7 +387,7 @@ h2 { font-size: clamp(1.75rem, 3.5vw, 2.4rem); margin: 0 0 0.75rem; }
   background: var(--forest-deep);
   color: #d7ddd8;
   padding: 2.5rem 0 2rem;
-  margin-top: 2rem;
+  margin-top: 0;
 }
 .site-footer a { color: var(--gold-soft); text-decoration: none; }
 .site-footer a:hover { color: var(--cream); text-decoration: underline; }
@@ -391,7 +399,7 @@ h2 { font-size: clamp(1.75rem, 3.5vw, 2.4rem); margin: 0 0 0.75rem; }
   .footer-grid { grid-template-columns: 1.4fr 1fr 1fr; }
 }
 .footer-name {
-  font-family: var(--serif);
+  font-family: var(--heading);
   color: var(--cream);
   font-size: 1.35rem;
   margin: 0 0 0.4rem;
