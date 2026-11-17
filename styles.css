@@ -1,20 +1,19 @@
 /* Milton Station LLC — miltonstation.com */
 :root {
   --bg: #f4f0e6;
-  --bg-alt: #e4ebe6;
-  --bg-card: #fbf8f1;
-  --ink: #1b211c;
-  --ink-muted: #545c56;
-  --line: #d6cebe;
-  --forest: #234033;
-  --forest-deep: #15241d;
-  --moss: #3c6a51;
-  --gold: #d9a441;
-  --gold-soft: #e8d9b0;
+  --bg-alt: #eceef6;
+  --bg-card: #fffaf2;
+  --ink: #152a52;
+  --ink-muted: #3d4a63;
+  --line: #d4d2cc;
   --navy: #1e3a6e;
+  --navy-deep: #152a52;
+  --gold: #d9a441;
+  --gold-text: #7c5818;
+  --gold-soft: #e8d9b0;
   --cream: #fffaf2;
   --focus: #1e3a6e;
-  --shadow: 0 12px 40px rgba(21, 36, 29, 0.08);
+  --shadow: 0 12px 40px rgba(21, 42, 82, 0.10);
   --radius: 16px;
   --max: 70rem;
   --text: 38rem;
@@ -40,10 +39,10 @@ body {
 }
 
 img, svg { display: block; max-width: 100%; }
-a { color: var(--moss); }
-a:hover { color: var(--forest); }
+a { color: var(--navy); }
+a:hover { color: var(--navy-deep); }
 :focus-visible {
-  outline: 3px solid var(--gold);
+  outline: 3px solid var(--navy);
   outline-offset: 3px;
 }
 
@@ -51,7 +50,7 @@ a:hover { color: var(--forest); }
   position: absolute;
   left: 1rem;
   top: -4rem;
-  background: var(--forest-deep);
+  background: var(--navy-deep);
   color: var(--cream);
   padding: 0.6rem 1rem;
   z-index: 100;
@@ -80,6 +79,21 @@ a:hover { color: var(--forest); }
   justify-content: space-between;
   gap: 1rem;
   padding: 0.75rem 0;
+}
+@media (max-width: 799px) {
+  .header-inner {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.55rem 1rem;
+    padding: 0.7rem 0 0.8rem;
+  }
+  .nav {
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 0.5rem 0.7rem;
+    font-size: 0.88rem;
+  }
 }
 .brand {
   display: flex;
@@ -110,8 +124,9 @@ a:hover { color: var(--forest); }
   font-size: 0.7rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-text);
   font-weight: 600;
+  white-space: nowrap;
 }
 .nav {
   display: flex;
@@ -124,7 +139,7 @@ a:hover { color: var(--forest); }
   color: var(--ink);
   text-decoration: none;
 }
-.nav a:hover, .nav a[aria-current="page"] { color: var(--moss); }
+.nav a:hover, .nav a[aria-current="page"] { color: var(--navy); }
 
 /* Hero */
 .hero {
@@ -162,7 +177,7 @@ a:hover { color: var(--forest); }
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-text);
   margin: 0 0 1.15rem;
 }
 .eyebrow::before {
@@ -171,7 +186,7 @@ a:hover { color: var(--forest); }
   height: 2px;
   background: var(--navy);
 }
-h1, h2, h3 { font-family: var(--heading); font-weight: 500; letter-spacing: 0; line-height: 1.28; color: var(--forest-deep); }
+h1, h2, h3 { font-family: var(--heading); font-weight: 500; letter-spacing: 0; line-height: 1.28; color: var(--navy-deep); }
 .hero h1 {
   font-size: clamp(2.15rem, 5.4vw, 3.55rem);
   font-weight: 600;
@@ -197,26 +212,26 @@ h1, h2, h3 { font-family: var(--heading); font-weight: 500; letter-spacing: 0; l
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: var(--forest);
+  background: var(--navy);
   color: var(--cream);
   text-decoration: none;
   font-weight: 600;
   padding: 0.75rem 1.25rem;
   border-radius: 999px;
-  border: 1px solid var(--forest);
+  border: 1px solid var(--navy);
 }
-.btn:hover { background: var(--forest-deep); color: var(--cream); }
+.btn:hover { background: var(--navy-deep); color: var(--cream); }
 .btn-ghost {
   background: transparent;
-  color: var(--forest);
+  color: var(--navy);
 }
-.btn-ghost:hover { background: color-mix(in srgb, var(--forest) 8%, transparent); color: var(--forest-deep); }
+.btn-ghost:hover { background: color-mix(in srgb, var(--navy) 8%, transparent); color: var(--navy-deep); }
 
 .plaque {
   display: inline-flex;
   flex-direction: column;
   gap: 0.15rem;
-  background: var(--forest-deep);
+  background: var(--navy-deep);
   color: var(--cream);
   padding: 1rem 1.25rem;
   border-radius: 4px 4px 12px 12px;
@@ -252,7 +267,7 @@ section { padding: 3.25rem 0; }
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--gold-text);
   margin: 0 0 0.65rem;
 }
 h2 { font-size: clamp(1.7rem, 3.4vw, 2.35rem); margin: 0 0 0.85rem; }
@@ -284,7 +299,7 @@ h2::after {
 .step-num {
   font-family: var(--heading);
   font-size: 1.75rem;
-  color: var(--gold);
+  color: var(--gold-text);
   font-weight: 600;
   margin-bottom: 0.4rem;
 }
@@ -316,7 +331,7 @@ h2::after {
   .optin-grid { grid-template-columns: 1fr 22rem; }
 }
 .mock-phone {
-  background: var(--forest-deep);
+  background: var(--navy-deep);
   border-radius: 28px;
   padding: 0.7rem;
   box-shadow: var(--shadow);
@@ -341,7 +356,7 @@ h2::after {
   font-family: var(--heading);
   font-size: 1.2rem;
   margin: 0 0 1rem;
-  color: var(--forest-deep);
+  color: var(--navy-deep);
 }
 .mock-consent {
   display: flex;
@@ -357,7 +372,7 @@ h2::after {
   width: 1.25rem;
   height: 1.25rem;
   margin-top: 0.15rem;
-  border: 2px solid var(--forest);
+  border: 2px solid var(--navy);
   border-radius: 4px;
   background: var(--cream);
 }
@@ -393,9 +408,9 @@ h2::after {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   font-weight: 600;
-  color: var(--gold);
+  color: var(--gold-text);
 }
-.contact-list a { text-decoration: none; font-weight: 600; color: var(--forest); }
+.contact-list a { text-decoration: none; font-weight: 600; color: var(--navy); }
 .contact-list a:hover { text-decoration: underline; }
 
 /* Legal pages */
@@ -420,8 +435,8 @@ h2::after {
 
 /* Footer */
 .site-footer {
-  background: var(--forest-deep);
-  color: #d7ddd8;
+  background: var(--navy-deep);
+  color: #c5cadd;
   padding: 2.5rem 0 2rem;
   margin-top: 0;
 }
@@ -451,5 +466,5 @@ h2::after {
   padding-top: 1.15rem;
   border-top: 1px solid color-mix(in srgb, var(--cream) 16%, transparent);
   font-size: 0.9rem;
-  color: #9aa89e;
+  color: #9aa8b8;
 }
